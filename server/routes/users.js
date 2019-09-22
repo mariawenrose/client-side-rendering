@@ -1,4 +1,6 @@
 const express = require('express')
+const request = require('superagent')
+c
 
 const db = require('../db')
 
@@ -13,5 +15,15 @@ router.get('/', (req, res) => {
       res.status(500).send('DATABASE ERROR: ' + err.message)
     })
 })
+
+router.get('/cats', (req, res) => {
+  request.get('https://cat-fact.herokuapp.com/facts') 
+  .then( result => {
+    res.send(result)
+    
+  })
+
+})
+
 
 module.exports = router

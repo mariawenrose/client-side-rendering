@@ -20,5 +20,7 @@ server.use(express.json())
 // Routes
 
 server.use('/', userRoutes)
+server.use('/v1', apiRoutes)
+
 
 module.exports = server

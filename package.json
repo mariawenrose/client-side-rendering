@@ -7,7 +7,10 @@
     "knex": "knex",
     "dev": "nodemon --watch server & webpack --watch client",
     "start": "node server/index",
-    "test": "jest --watchAll"
+    "test": "jest --watchAll",
+    "server": "nodemon --watch",
+    "bundle": "webpack --watch"
+
   },
   "repository": {
     "type": "git",
